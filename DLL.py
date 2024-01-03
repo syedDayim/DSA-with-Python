@@ -30,6 +30,18 @@ class DLL:
             new_node.prev = self.tail
             self.tail = new_node
 
+    def search(self, target):
+        temp = self.head
+        found = False
+        while temp:
+            if temp.item == target:
+                found = True
+                return temp
+            temp = temp.next
+        if found == False:
+            return None
+
+
     def printList(self):
         temp = self.head
         while temp:
@@ -46,4 +58,5 @@ mydll.addFirst(30)
 mydll.addLast(100)
 mydll.addLast(300)
 mydll.addFirst(800)
+mydll.addAfter(mydll.search(300), 1000)
 mydll.printList()
