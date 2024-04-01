@@ -1,6 +1,3 @@
-import time
-
-
 class Node:
      def __init__(self, data=None, next=None):
         self.data = data
@@ -67,15 +64,9 @@ class QueueList:
 
 
 q = QueueList()
-q.enqueue(1)
-q.enqueue(2)
-q.enqueue(5)
-q.enqueue(100)
-q.enqueue(600)
-q.enqueue(700)
-q.enqueue(7)
-q.enqueue(7000)
-print(q.get_front())
-print(q.get_rear())
-print(q.getLength())
+q.enqueue(10)
+q.enqueue(20)
+q.dequeue()
+q.dequeue()
+
 q.showList()
